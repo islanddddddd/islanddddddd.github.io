@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Library</title>
+    <script src="url/jquery-3.4.1.min.js"></script>
+    <script src="js/index.js"></script>
+    <link href="css/download.css" rel="stylesheet" />
+    <link href="css/index.css" rel="stylesheet" />
+    <link href="url/font-awesome-4.7.0/css/font-awesome.min.css" rel="stylesheet" />
+
+</head>
+
+<body class="my-bg-dark">
+    <!--导航栏-->
+    <header>
+        <nav>
+            <div class=" icon" style="float: left;">
+                <a href="index.html">STEAM</a>
+            </div>
+            <div class="naval">
+                <ul style="display: inline;">
+                    <li> <a href="html/download.html">下载</a></li>
+                    <li> <a href="index.html">库</a></li>
+                    <li> <a>社区</a></li>
+                </ul>
+            </div>
+            <div class="navar">
+                <a class=" nav-link" href="./html/login.html"><i class="fa fa-user-circle-o "></i></a>
+            </div>
+        </nav>
+    </header>
+    <!--内容-->
+    <div class="store">
+        <!--内容导航-->
+        <div class="storecontentnav">
+            <button id="btn1" class="storecontentnavbtn">您的商店
+                <i class=" fa fa-caret-down"></i>
+                <div id="mnav1" class="mnav">
+                    <p>商店主页</p>
+                    <hr style="color: wheat;width: 70%;margin: auto;">
+                    <p>最近查看过的</p>
+                    <p>Steam鉴赏家</p>
+                    <p>最近更新</p>
+                </div>
+            </button>
+            <button id="btn2" class="storecontentnavbtn">游戏
+                <i class=" fa fa-caret-down"></i>
+                <div id="mnav2" class="mnav">
+                    <p>免费游戏</p>
+                    <p>抢先体验</p>
+                    <p>试玩</p>
+                    <hr style="color: wheat;width: 70%;margin: auto;">
+
+                    <h6 style="text-align: left;margin: 10px 0 0 20px;font-size: 0.7rem;">按类型分类</h6>
+                    <p><a> 免费游玩</a></p>
+                    <p><a>抢先体验</a></p>
+                    <p><a>休闲</a></p>
+                    <p><a>体育</a></p>
+                    <p><a>动作</a></p>
+                    <p><a>大型多人在线</a></p>
+                    <p><a>模拟</a></p>
+                    <p><a>独立</a></p>
+                    <p><a>竞速</a></p>
+                    <p><a>策略</a></p>
+                    <p><a>角色扮演</a></p>
+
+                </div>
+            </button>
+            <button id="btn3" class="storecontentnavbtn">软件
+                <i class=" fa fa-caret-down"></i>
+                <div id="mnav3" class="mnav">
+                    <p>软件中心</p>
+                    <hr style="color: wheat;width: 70%;margin: auto;">
+                    <p>动画制作和建模</p>
+                    <p>实用工具</p>
+                    <p>教育</p>
+                    <p>游戏开发</p>
+                    <p>照片编辑</p>
+                    <p>网络出版</p>
+                    <p>视频制作</p>
+                    <p>设计与插画</p>
+                    <p>音频制作</p>
+                </div>
+            </button>
+            <button id="btn4" class="storecontentnavbtn">硬件
+                <i class=" fa fa-caret-down"></i>
+                <div id="mnav4" class="mnav">
+                    <p>Value index</p>
+                    <p>Steam控制器</p>
+                    <p>Steam流式盒</p>
+                    <p>HTC vive</p>
+                </div>
+            </button>
+            <button id="btn5" class="storecontentnavbtn">新闻</button>
+            <button id="btn6" class="storecontentnavbtn">Steam实验室</button>
+            <div style="float: right;"> <input type="search"
+                    style="display: inline-block;height:30px;background-color: #707377;border: none;"
+                    placeholder="搜索商店"><button class="storecontentnavbtn"
+                    style="width: 30px;height:30px;text-align: center;margin: 0;padding: 0;"><i class="fa fa-search"
+                        style="margin: 0;"></i></button></div>
+        </div>
+        <!--侧栏-->
+        <div class="aside">
+            <img class="steamicon" src="image/steamstore.png">
+            <div class="asidetext">
+                <h6>推荐</h6>
+                <p><a><i class="fa fa-group"></i>&nbsp;&nbsp;由好友推荐</a></p>
+                <p><a><i class="fa fa-bullseye"></i>&nbsp;&nbsp;由鉴赏家推荐</a></p>
+                <p><a><i class="fa fa-tags"></i>&nbsp;&nbsp;标签</a></p>
+                <h6>探索队列</h6>
+                <p><a><i class="fa fa-clone"></i>&nbsp;&nbsp;推荐</a></p>
+                <p><a><i class="fa fa-search-plus"></i>&nbsp;&nbsp;新品</a></p>
+                <h6>浏览分类</h6>
+                <p><a><i class="fa fa-line-chart"></i>&nbsp;&nbsp;热销商品</a></p>
+                <p><a><i class="fa fa-clock-o"></i>&nbsp;&nbsp;最近更新</a></p>
+                <p><a><i class="fa fa-plus-square"></i>&nbsp;&nbsp;新品</a></p>
+                <p><a><i class="fa fa-search-plus"></i>&nbsp;&nbsp;即将推出</a></p>
+                <p><a><i class="fa fa-percent"></i>&nbsp;&nbsp;优惠</a></p>
+                <p><a><i>vr</i>&nbsp;&nbsp;虚拟现实</a></p>
+                <p><a><i class="fa fa-gamepad"></i>&nbsp;&nbsp;支持Steam控制器</a></p>
+                <h6>浏览分类</h6>
+                <p><a>免费游玩</a></p>
+                <p><a>抢先体验</a></p>
+                <p><a>休闲</a></p>
+                <p><a>体育</a></p>
+                <p><a>动作</a></p>
+                <p><a>大型多人在线</a></p>
+                <p><a>模拟</a></p>
+                <p><a>独立</a></p>
+                <p><a>竞速</a></p>
+                <p><a>策略</a></p>
+                <p><a>角色扮演</a></p>
+            </div>
+
+        </div>
+        <!--内容-->
+        <div class="storecontent">
+            <!--banner-->
+            <div class="storebanner">
+                <div onclick="i--;bannergo(1)" class="storebannerleft"><i class="fa fa-angle-left fa-3x"></i></div>
+                <div onclick="i++;bannergo(1)" class="storebannerright"><i class="fa fa-angle-right fa-3x"></i></div>
+
+                <div id="storebannerimgdiv1" class="storebannerimgdiv" style="z-index: 3;">
+                    <img class="storebannerimg" src="image/The Scroll Of Taiwu.png">
+                    <div class="storebannerimgdivtext">
+                        <h4>太吾绘卷 The Scroll Of Taiwu</h4>
+                        <p>《太吾绘卷》是一款以神话和武侠为题材的独立游戏。玩家将扮演神秘的“太吾氏传人”，在以古代中华神州为背景的架空世界中，通过一代又一代传人的努力和牺牲，最终击败强大的宿敌，决定人世的命运。
+                        </p>
+                    </div>
+                </div>
+                <div id="storebannerimgdiv2" class="storebannerimgdiv" style="z-index: 2">
+                    <img class="storebannerimg" src="image/Stick Fight- The Game.png">
+                    <div class="storebannerimgdivtext">
+                        <h4>Stick Fight: The Game</h4>
+                        <p>Stick Fight is a physics-based couch/online fighting game where you battle it out as the
+                            iconic stick figures from the golden age of the internet.</p>
+                    </div>
+                </div>
+
+                <div id="storebannerimgdiv3" class="storebannerimgdiv" style="z-index: 1">
+                    <img class="storebannerimg" src="image/slaythespire.jpg">
+                    <div class="storebannerimgdivtext">
+                        <h4>Slay the Spire</h4>
+                        <p>我们将卡牌游戏与Roguelike游戏融为一体，制作出了这款最棒的单机组牌游戏。打造出独一无二的牌组、遇见无数离奇的生物、发现威力强大的遗物、去屠戮这座高塔吧！</p>
+                    </div>
+                </div>
+
+            </div>
+            <!--content-->
+            <div class="storecontentcardgroup">
+                <div class="storecard">
+                    <div class="storecardimgdiv"><img class="storecardimg" src="./image/Otaku's Adventure.jpg"></div>
+                    <div class="storecardtext">
+                        <h3>Otaku's Adventure</h3>
+                        <p class="storecardtextp">发行日期:2019年5月20日</p>
+                        <p class="storecardtextlabel">独立</p>
+                        <p class="storecardtextlabel">多结局</p>
+                        <p class="storecardtextlabel">角色扮演</p>
+                        <p class="storecardtextlabel">冒险</p>
+                        <p class="storecardtextlabel">欢乐</p>
+                        <p class="storecardtextlabel">label</p>
+                    </div>
+                    <div class="storecardprice">
+                        <p class="storecardprice">¥ 32</p>
+                    </div>
+                </div>
+                <div class="storecard">
+                    <div class="storecardimgdiv"><img class="storecardimg" src="./image/The Scroll Of Taiwu.png"></div>
+                    <div class="storecardtext">
+                        <h3>太吾绘卷 The Scroll Of Taiwu</h3>
+                        <p class="storecardtextp">发行日期：2018年9月21日</p>
+                        <p class="storecardtextlabel">抢先体验</p>
+                        <p class="storecardtextlabel">角色扮演</p>
+                        <p class="storecardtextlabel">武术</p>
+                        <p class="storecardtextlabel">沙盒</p>
+
+                    </div>
+                    <div class="storecardprice">
+                        <p class="storecardprice">
+                            <span class="storecardpricediscount">-16%</span>
+                            <span class="storecardoprice">¥ 68</span>
+                            ¥ 58
+                        </p>
+                    </div>
+                </div>
+                <div class="storecard">
+                    <div class="storecardimgdiv">
+                        <img class="storecardimg" src="./image/slaythespire.jpg"></div>
+                    <div class="storecardtext">
+                        <h3>Slay the Spire</h3>
+                        <p class="storecardtextp">发行日期:
+                            2019年1月23日</p>
+                        <p class="storecardtextlabel">卡牌</p>
+                        <p class="storecardtextlabel">类Rogue</p>
+                        <p class="storecardtextlabel">回合制</p>
+                        <p class="storecardtextlabel">策略</p>
+                        <p class="storecardtextlabel">单人</p>
+                        <p class="storecardtextlabel">独立</p>
+                    </div>
+                    <div class="storecardprice">
+                        <p class="storecardprice">¥ 80</p>
+                    </div>
+                </div>
+                <div class="storecard">
+                    <div class="storecardimgdiv">
+                        <img class="storecardimg" src="./image/Stick Fight- The Game.png"></div>
+                    <div class="storecardtext">
+                        <h3>Stick Fight: The Game</h3>
+                        <p class="storecardtextp">发行日期:
+                            2017年9月28日</p>
+                        <p class="storecardtextlabel">多人</p>
+                        <p class="storecardtextlabel">欢乐</p>
+                        <p class="storecardtextlabel">格斗</p>
+                        <p class="storecardtextlabel">动作</p>
+                        <p class="storecardtextlabel">2D格斗</p>
+                        <p class="storecardtextlabel">本地多人</p>
+                    </div>
+                    <div class="storecardprice">
+                        <p class="storecardprice">¥ 21</p>
+                    </div>
+                </div>
+
+                <div class="storecard">
+                    <div class="storecardimgdiv"><img class="storecardimg" src="./image/Otaku's Adventure.jpg"></div>
+                    <div class="storecardtext">
+                        <h3>Otaku's Adventure</h3>
+                        <p class="storecardtextp">发行日期:2019年5月20日</p>
+                        <p class="storecardtextlabel">独立</p>
+                        <p class="storecardtextlabel">多结局</p>
+                        <p class="storecardtextlabel">角色扮演</p>
+                        <p class="storecardtextlabel">冒险</p>
+                        <p class="storecardtextlabel">欢乐</p>
+                        <p class="storecardtextlabel">label</p>
+                    </div>
+                    <div class="storecardprice">
+                        <p class="storecardprice">¥ 32</p>
+                    </div>
+                </div>
+                <div class="storecard">
+                    <div class="storecardimgdiv"><img class="storecardimg" src="./image/The Scroll Of Taiwu.png"></div>
+                    <div class="storecardtext">
+                        <h3>太吾绘卷 The Scroll Of Taiwu</h3>
+                        <p class="storecardtextp">发行日期：2018年9月21日</p>
+                        <p class="storecardtextlabel">抢先体验</p>
+                        <p class="storecardtextlabel">角色扮演</p>
+                        <p class="storecardtextlabel">武术</p>
+                        <p class="storecardtextlabel">沙盒</p>
+
+                    </div>
+                    <div class="storecardprice">
+                        <p class="storecardprice">
+                            <span class="storecardpricediscount">-16%</span>
+                            <span class="storecardoprice">¥ 68</span>
+                            ¥ 58
+                        </p>
+                    </div>
+                </div>
+                <div class="storecard">
+                    <div class="storecardimgdiv">
+                        <img class="storecardimg" src="./image/slaythespire.jpg"></div>
+                    <div class="storecardtext">
+                        <h3>Slay the Spire</h3>
+                        <p class="storecardtextp">发行日期:
+                            2019年1月23日</p>
+                        <p class="storecardtextlabel">卡牌</p>
+                        <p class="storecardtextlabel">类Rogue</p>
+                        <p class="storecardtextlabel">回合制</p>
+                        <p class="storecardtextlabel">策略</p>
+                        <p class="storecardtextlabel">单人</p>
+                        <p class="storecardtextlabel">独立</p>
+                    </div>
+                    <div class="storecardprice">
+                        <p class="storecardprice">¥ 80</p>
+                    </div>
+                </div>
+                <div class="storecard">
+                    <div class="storecardimgdiv">
+                        <img class="storecardimg" src="./image/Stick Fight- The Game.png"></div>
+                    <div class="storecardtext">
+                        <h3>Stick Fight: The Game</h3>
+                        <p class="storecardtextp">发行日期:
+                            2017年9月28日</p>
+                        <p class="storecardtextlabel">多人</p>
+                        <p class="storecardtextlabel">欢乐</p>
+                        <p class="storecardtextlabel">格斗</p>
+                        <p class="storecardtextlabel">动作</p>
+                        <p class="storecardtextlabel">2D格斗</p>
+                        <p class="storecardtextlabel">本地多人</p>
+                    </div>
+                    <div class="storecardprice">
+                        <p class="storecardprice">¥ 21</p>
+                    </div>
+                </div>
+                <div class="storecard">
+                    <div class="storecardimgdiv"><img class="storecardimg" src="./image/Otaku's Adventure.jpg"></div>
+                    <div class="storecardtext">
+                        <h3>Otaku's Adventure</h3>
+                        <p class="storecardtextp">发行日期:2019年5月20日</p>
+                        <p class="storecardtextlabel">独立</p>
+                        <p class="storecardtextlabel">多结局</p>
+                        <p class="storecardtextlabel">角色扮演</p>
+                        <p class="storecardtextlabel">冒险</p>
+                        <p class="storecardtextlabel">欢乐</p>
+                        <p class="storecardtextlabel">label</p>
+                    </div>
+                    <div class="storecardprice">
+                        <p class="storecardprice">¥ 32</p>
+                    </div>
+                </div>
+                <div class="storecard">
+                    <div class="storecardimgdiv"><img class="storecardimg" src="./image/The Scroll Of Taiwu.png"></div>
+                    <div class="storecardtext">
+                        <h3>太吾绘卷 The Scroll Of Taiwu</h3>
+                        <p class="storecardtextp">发行日期：2018年9月21日</p>
+                        <p class="storecardtextlabel">抢先体验</p>
+                        <p class="storecardtextlabel">角色扮演</p>
+                        <p class="storecardtextlabel">武术</p>
+                        <p class="storecardtextlabel">沙盒</p>
+
+                    </div>
+                    <div class="storecardprice">
+                        <p class="storecardprice">
+                            <span class="storecardpricediscount">-16%</span>
+                            <span class="storecardoprice">¥ 68</span>
+                            ¥ 58
+                        </p>
+                    </div>
+                </div>
+                <!--页码-->
+                <div>
+                    <div>
+                        <p style="font-size: 0.8rem;float: left;">正在显示1~10个，共9999个</p>
+                    </div>
+                    <div style="font-size: 0.8rem;float: right;color: #67c1f5;;">
+                        <a class="storepagenum" style="color: white;">1</a>
+                        <a class="storepagenum">2</a>
+                        <a class="storepagenum">3</a>
+                        <a class="storepagenum">...</a>
+                        <a class="storepagenum">9999</a>
+
+                        <i class="fa fa-angle-right storepagenumnext"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer id="footer">
+        <div class="footerlink">
+            <div class="footerlinkgroup1">
+                <h2>关于我们</h2>
+                <p><a href="#">关于我们</a>
+                    <a href="#">联系我们</a>
+                </p>
+                <p><a href="#">加入我们</a>
+                    <a href="#">友情链接</a>
+                </p>
+            </div>
+            <div class="footerlinkgroup2">
+                <h2>传送门</h2>
+                <p><a href="#">帮助中心</a>
+                    <a href="#">侵权申诉</a>
+                </p>
+                <p><a href="#">活动中心</a></p>
+            </div>
+            <div class="footerlinkgroup3">
+                <h2>其他链接</h2>
+                <p><a href="#">其他链接1</a>
+                    <a href="#">其他链接2</a>
+                </p>
+            </div>
+
+        </div>
+        <div class="text-muted" style="margin: 10% 0;text-align: center;">
+            <p>广播电视节目制作经营许可证：（沪）字第1248号|网络文化经营许可证：沪网文【2016】2296-134号|信息网络传播视听节目许可证：0910417</p>
+            <p>互联网ICP备案：沪ICP备13002172号-3沪ICP证：沪B2-20100043 |违法不良信息举报邮箱：help@bilibili.com |违法不良信息举报电话：4000233233转3 | 营业执照
+            </p>
+        </div>
+        <div class="footernav">
+            <a>2019/9/23</a>
+            <a style="float: right">软工2班刘闯</a>
+        </div>
+    </footer>
+</body>
+
+</html>
