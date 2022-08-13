@@ -1,3 +1,11 @@
+@font-face {
+    font-family: "DottedSquare";
+    src: url("../../assets/font/DottedSongtiSquareRegular.otf");
+}
+@font-face {
+    font-family: "DottediCircle";
+    src: url("../../assets/font/DottedSongtiCircleRegular.otf");
+}
 body {
     height: 100%;
     overflow: hidden;
@@ -47,7 +55,7 @@ body {
 
 .bigday {
     font-size: 25rem;
-    font-family: "ruarua";
+    font-family: "DottediCircle";
     font-weight: bold;
 }
 
