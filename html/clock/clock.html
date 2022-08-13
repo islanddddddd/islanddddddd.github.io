@@ -31,6 +31,7 @@
             </div>
         </div> -->
         <div class="content">
+            12312dawdasf32q3tq
             <div id="time" class="bigday" onclick="rotate()">21:47</div>
             <div id="data" class="month">
 
@@ -64,12 +65,10 @@
             var Year = currTime.getFullYear();
             var Month = currTime.getMonth() + 1;
             var Day = currTime.getDate();
-
             var weekDays = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
             var weekDay = weekDays[currTime.getDay()];
 
             var dataStr = `${Year}年${Month}月${Day}日 ${weekDay}`
-            console.log(dataStr);
             document.getElementById('data').innerText = dataStr
 
 
