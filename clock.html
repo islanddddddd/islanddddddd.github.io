@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kindle时钟</title>
+    <link rel="stylesheet" href="./clock.css">
+</head>
+
+<body>
+    <div class="contain">
+        <!-- <div class="head">
+            <div class="date">
+                <span>2022-08-13</span> <span class="week">August / Sat</span>
+            </div>
+            <div class="area">
+                郑州
+                <i class="layui-icon layui-icon-location"></i>
+            </div>
+        </div> -->
+        <div class="content">
+            <div id="time" class="bigday">loading...</div>
+            <div id="data" class="month"></div>
+            <!-- <div id="sentence" class="sentence">The key to winning is poise under stress.</div> -->
+        </div>
+        <!-- <div id="foot" class="foot">
+            <img src="./Kindle时钟_files/104.png">
+            <span>阴 / 相对湿度 63% / 体感温度 35℃</span>
+        </div> -->
+    </div>
+    <script>
+        function refreshTime() {
+            var currTime = new Date();
+            var utc8DiffMinutes = currTime.getTimezoneOffset() + 480;
+            currTime.setMinutes(currTime.getMinutes() + utc8DiffMinutes);
+
+            var hh =
+                currTime.getHours() < 10
+                    ? "0" + currTime.getHours()
+                    : currTime.getHours(); //获取当前小时数(0-23)
+            var mi =
+                currTime.getMinutes() < 10
+                    ? "0" + currTime.getMinutes()
+                    : currTime.getMinutes(); //获取当前分钟数(0-59)
+            var ss =
+                currTime.getSeconds() < 10
+                    ? "0" + currTime.getSeconds()
+                    : currTime.getSeconds(); //获取当前秒数(0-59)
+
+            var Year = currTime.getFullYear();
+            var Month = currTime.getMonth() + 1;
+            var Day = currTime.getDate();
+            var weekDays = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+            var weekDay = weekDays[currTime.getDay()];
+            var dataStr = Year + "年" + Month + "月" + Day + "日" + weekDay
+            document.getElementById('data').innerText = dataStr
+
+
+            var element = document.getElementById("time");
+            element.innerText = hh + ":" + mi;
+
+        }
+
+        setInterval("refreshTime()", 1000);
+    </script>
+</body>
+
+</html>

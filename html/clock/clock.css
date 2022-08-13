@@ -3,14 +3,14 @@
     src: url("../../assets/font/DottedSongtiSquareRegular.otf");
 }
 @font-face {
-    font-family: "DottediCircle";
-    src: url("../../assets/font/DottedSongtiCircleRegular.otf");
+    font-family: "ipix";
+    src: url("../../assets/font/ipix_12px.ttf");
 }
 body {
     height: 100%;
     overflow: hidden;
     margin: 0 !important;
-    font-family: "DottedSquare";
+    font-family: "ipix";
 }
 
 .head {
