@@ -54,8 +54,7 @@
             var Day = currTime.getDate();
             var weekDays = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
             var weekDay = weekDays[currTime.getDay()];
-
-            var dataStr = `${Year}年${Month}月${Day}日 ${weekDay}`
+            var dataStr = Year + "年" + Month + "月" + Day + "日" + weekDay
             document.getElementById('data').innerText = dataStr
 
 
