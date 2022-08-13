@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kindle时钟</title>
+    <link rel="stylesheet" href="./index.css">
+    <!-- CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-p1KAotb3W9ndluCsqePPYnjRm3c6abdnIjo0tQwYUv83VsbsYd43RuofnFAaDo0E" crossorigin="anonymous">
+    <!-- jQuery and JavaScript Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-E5Sj1saJVFNzWWK3YIJB4LEDEEVEGaOdfmCprPDkfWUo+xkb6Ep52Q1TMEtgcFwi"
+        crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <div class="contain">
+        <div class="head">
+            <div class="date">
+                <span>2022-08-13</span> <span class="week">August / Sat</span>
+            </div>
+            <div class="area">
+                郑州
+                <i class="layui-icon layui-icon-location"></i>
+            </div>
+        </div>
+        <div class="content">
+            <div id="time" class="bigday" onclick="rotate()">21:47</div>
+            <div class="month"></div>
+            <div id="sentence" class="sentence">The key to winning is poise under stress.</div>
+        </div>
+        <div id="foot" class="foot">
+            <img src="./Kindle时钟_files/104.png">
+            <span>阴 / 相对湿度 63% / 体感温度 35℃</span>
+        </div>
+    </div>
+    <script>
+        var showSecondsOfSetting = "off";
+        var fontTypeOfClock = 2;
+        var fontTypeOfSentence = 3;
+        var fontTypeOfWeather = 3;
+
+        function rotate() {
+            document.getElementsByClassName('contain').style.transform = 'rotate(7deg)';
+            console.log(666);
+        }
+
+        function refreshTime() {
+            var currTime = new Date();
+            var utc8DiffMinutes = currTime.getTimezoneOffset() + 480;
+            currTime.setMinutes(currTime.getMinutes() + utc8DiffMinutes);
+
+            var hh =
+                currTime.getHours() < 10
+                    ? "0" + currTime.getHours()
+                    : currTime.getHours(); //获取当前小时数(0-23)
+            var mi =
+                currTime.getMinutes() < 10
+                    ? "0" + currTime.getMinutes()
+                    : currTime.getMinutes(); //获取当前分钟数(0-59)
+            var ss =
+                currTime.getSeconds() < 10
+                    ? "0" + currTime.getSeconds()
+                    : currTime.getSeconds(); //获取当前秒数(0-59)
+
+            if (showSecondsOfSetting === "on") {
+                document.getElementById("time").innerText = hh + ":" + mi + ":" + ss;
+            }
+            else {
+                var element = document.getElementById("time");
+                element.setAttribute("class", "bigday");
+                element.innerText = hh + ":" + mi;
+            }
+        }
+
+        function setFontType() {
+            if (fontTypeOfClock === 1) {
+                document.getElementById("time").style.fontFamily = 'FangSong';
+            }
+
+            if (fontTypeOfSentence === 1) {
+                document.getElementById("sentence").style.fontFamily = 'FangSong';
+            }
+
+            if (fontTypeOfWeather === 1) {
+                document.getElementById("foot").style.fontFamily = 'FangSong';
+            }
+        }
+
+        setFontType();
+
+        setInterval("refreshTime()", 1000);
+    </script>
+</body>
+
+</html>
