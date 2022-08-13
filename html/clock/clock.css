@@ -53,14 +53,13 @@ body {
 }
 
 .bigday {
-    font-size: 20rem;
-
+    font-size: 260px;
     font-weight: bold;
 }
 
 .month {
     /* margin: 50px 0 130px; */
-    font-size: 120px;
+    font-size: 50px;
     /* font-weight: bold; */
 }
 
