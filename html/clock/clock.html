@@ -21,7 +21,7 @@
 
 <body>
     <div class="contain">
-        <div class="head">
+        <!-- <div class="head">
             <div class="date">
                 <span>2022-08-13</span> <span class="week">August / Sat</span>
             </div>
@@ -29,28 +29,20 @@
                 郑州
                 <i class="layui-icon layui-icon-location"></i>
             </div>
-        </div>
+        </div> -->
         <div class="content">
             <div id="time" class="bigday" onclick="rotate()">21:47</div>
-            <div class="month"></div>
-            <div id="sentence" class="sentence">The key to winning is poise under stress.</div>
+            <div id="data" class="month">
+
+            </div>
+            <!-- <div id="sentence" class="sentence">The key to winning is poise under stress.</div> -->
         </div>
-        <div id="foot" class="foot">
+        <!-- <div id="foot" class="foot">
             <img src="./Kindle时钟_files/104.png">
             <span>阴 / 相对湿度 63% / 体感温度 35℃</span>
-        </div>
+        </div> -->
     </div>
     <script>
-        var showSecondsOfSetting = "off";
-        var fontTypeOfClock = 2;
-        var fontTypeOfSentence = 3;
-        var fontTypeOfWeather = 3;
-
-        function rotate() {
-            document.getElementsByClassName('contain').style.transform = 'rotate(7deg)';
-            console.log(666);
-        }
-
         function refreshTime() {
             var currTime = new Date();
             var utc8DiffMinutes = currTime.getTimezoneOffset() + 480;
@@ -69,31 +61,22 @@
                     ? "0" + currTime.getSeconds()
                     : currTime.getSeconds(); //获取当前秒数(0-59)
 
-            if (showSecondsOfSetting === "on") {
-                document.getElementById("time").innerText = hh + ":" + mi + ":" + ss;
-            }
-            else {
-                var element = document.getElementById("time");
-                element.setAttribute("class", "bigday");
-                element.innerText = hh + ":" + mi;
-            }
+            var Year = currTime.getFullYear();
+            var Month = currTime.getMonth() + 1;
+            var Day = currTime.getDate();
+
+            var weekDays = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+            var weekDay = weekDays[currTime.getDay()];
+
+            var dataStr = `${Year}年${Month}月${Day}日 ${weekDay}`
+            console.log(dataStr);
+            document.getElementById('data').innerText = dataStr
+
+
+            var element = document.getElementById("time");
+            element.innerText = hh + ":" + mi;
+
         }
-
-        function setFontType() {
-            if (fontTypeOfClock === 1) {
-                document.getElementById("time").style.fontFamily = 'FangSong';
-            }
-
-            if (fontTypeOfSentence === 1) {
-                document.getElementById("sentence").style.fontFamily = 'FangSong';
-            }
-
-            if (fontTypeOfWeather === 1) {
-                document.getElementById("foot").style.fontFamily = 'FangSong';
-            }
-        }
-
-        setFontType();
 
         setInterval("refreshTime()", 1000);
     </script>

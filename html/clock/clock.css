@@ -40,13 +40,13 @@ body {
 }
 
 .day {
-    font-size: 200px;
+    font-size: 18.75rem;
     font-family: "ruarua";
     font-weight: bold;
 }
 
 .bigday {
-    font-size: 260px;
+    font-size: 25rem;
     font-family: "ruarua";
     font-weight: bold;
 }
