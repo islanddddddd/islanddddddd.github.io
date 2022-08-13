@@ -52,9 +52,9 @@ body {
 }
 
 .month {
-    margin: 50px 0 130px;
+    /* margin: 50px 0 130px; */
     font-size: 50px;
-    font-weight: bold;
+    /* font-weight: bold; */
 }
 
 .sentence {
