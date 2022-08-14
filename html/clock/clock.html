@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="./clock.css">
 </head>
 
-<body>
+<body class="rotate">
     <div class="contain">
         <!-- <div class="head">
             <div class="date">
@@ -20,7 +20,7 @@
                 <i class="layui-icon layui-icon-location"></i>
             </div>
         </div> -->
-        <div class="content">
+        <div class="content" onclick="rotate()">
             <div id="time" class="bigday">loading...</div>
             <div id="data" class="month"></div>
             <!-- <div id="sentence" class="sentence">The key to winning is poise under stress.</div> -->
@@ -54,6 +54,16 @@
         </div>
     </div>
     <script>
+        function rotate() {
+            var b = document.getElementsByTagName('body')[0]
+            console.log(b.className);
+            if (b.classList.length == 0) {
+                b.className = "rotate"
+            } else {
+                b.className = ""
+            }
+
+        }
         function refreshTime() {
             var currTime = new Date();
             var utc8DiffMinutes = currTime.getTimezoneOffset() + 480;
