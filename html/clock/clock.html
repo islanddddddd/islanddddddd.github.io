@@ -17,31 +17,7 @@
             <div id="data" class="month"></div>
         </div>
         <div id="foot" class="foot">
-            <div id="he-plugin-simple"></div>
-            <script>
-                WIDGET = {
-                    "CONFIG": {
-                        "modules": "01234",
-                        "background": "5",
-                        "tmpColor": "000000",
-                        "tmpSize": "48",
-                        "cityColor": "000000",
-                        "citySize": "48",
-                        "aqiColor": "000000",
-                        "aqiSize": "48",
-                        "weatherIconSize": "72",
-                        "alertIconSize": "54",
-                        "padding": "10px 10px 10px 10px",
-                        "shadow": "0",
-                        "language": "auto",
-                        "fixed": "false",
-                        "vertical": "center",
-                        "horizontal": "center",
-                        "key": "9b525c6af1da416a85aeb309a2fad760"
-                    }
-                }
-            </script>
-            <script src="https://widget.qweather.net/simple/static/js/he-simple-common.js?v=2.0"></script>
+            foot
         </div>
     </div>
     <script>
@@ -52,6 +28,7 @@
             } else {
                 b.className = ""
             }
+            console.log(b.className);
 
         }
         function refreshTime() {
