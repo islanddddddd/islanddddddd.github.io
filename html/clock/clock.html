@@ -11,19 +11,10 @@
 
 <body class="rotate">
     <div class="contain">
-        <!-- <div class="head">
-            <div class="date">
-                <span>2022-08-13</span> <span class="week">August / Sat</span>
-            </div>
-            <div class="area">
-                郑州
-                <i class="layui-icon layui-icon-location"></i>
-            </div>
-        </div> -->
+
         <div class="content" onclick="rotate()">
             <div id="time" class="bigday">loading...</div>
             <div id="data" class="month"></div>
-            <!-- <div id="sentence" class="sentence">The key to winning is poise under stress.</div> -->
         </div>
         <div id="foot" class="foot">
             <div id="he-plugin-simple"></div>
@@ -56,7 +47,7 @@
     <script>
         function rotate() {
             var b = document.getElementsByTagName('body')[0]
-            if (b.classList.length == 0) {
+            if (b.className == "") {
                 b.className = "rotate"
             } else {
                 b.className = ""

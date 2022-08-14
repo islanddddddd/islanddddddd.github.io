@@ -10,7 +10,7 @@ body {
     top: 0;
     overflow: hidden;
     margin: 0 !important;
-    font-family: "ipix";
+    /* font-family: "ipix"; */
 }
 .rotate {
     height: 100vw;
@@ -21,32 +21,7 @@ body {
     transform-origin: 0% 0%;
     transform: rotate(90deg);
 }
-.head {
-    height: 1.875rem;
-    width: 100%;
-    font-size: 2.5rem;
-    line-height: 1.875rem;
-    font-weight: bolder;
-    margin: 1.5625rem;
-}
 
-.date {
-    width: 70%;
-    float: left;
-}
-
-.area {
-    width: 30%;
-    float: right;
-    text-align: right;
-    font-weight: bolder;
-    position: relative;
-    left: -2.5rem;
-}
-
-.area i {
-    font-size: 1.875rem;
-}
 .contain {
     width: 100%;
 }
@@ -57,26 +32,14 @@ body {
     margin-top: 12.5rem;
 }
 
-.day {
-    font-size: 300px;
-
-    font-weight: bold;
-}
-
 .bigday {
     font-size: 22.5rem;
     font-weight: bold;
 }
 
 .month {
-    /* margin: 3.125rem 0 8.125rem; */
     font-size: 5rem;
     /* font-weight: bold; */
-}
-
-.sentence {
-    font-size: 3.125rem;
-    text-align: center;
 }
 
 .foot {
@@ -84,14 +47,4 @@ body {
     bottom: 0;
     width: 100%;
     text-align: center;
-}
-
-.foot img {
-    height: 3.75rem;
-}
-
-.foot span {
-    position: relative;
-    top: -0.9375rem;
-    font-size: 2.8125rem;
 }
