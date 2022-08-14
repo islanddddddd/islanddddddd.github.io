@@ -4,7 +4,7 @@
 }
 body {
     height: 100vh;
-    width: auto;
+    width: 100vw;
     position: absolute;
     left: 0;
     top: 0;
@@ -13,8 +13,8 @@ body {
     /* font-family: "ipix"; */
 }
 .rotate {
-    position: absolute;
-    top: 0;
+    height: 100vw;
+    width: 100vh;
     transform: rotate(90deg);
     -webkit-transform: rotate(90deg);
     transform-origin: center center;
@@ -26,7 +26,6 @@ body {
 }
 .content {
     width: 100%;
-    margin: 0 auto;
     text-align: center;
     margin-top: 12.5rem;
 }
