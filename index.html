@@ -4,21 +4,21 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>islanddddddd | 常用 AI 工具与个人主页</title>
-  <meta name="description" content="islanddddddd 的个人主页 - 以常用 AI 工具链 (DeepSeek Harness, Google Antigravity, Claude Code, WorkBuddy) 与实用项目为核心">
+  <title>islanddddddd | Everyday AI Stack</title>
+  <meta name="description" content="islanddddddd 的个人主页 - 常用 AI 工具与智能体实践 (DeepSeek Harness, Google Antigravity, Claude Code, WorkBuddy)">
   <link rel="icon" href="img/avatar.jpeg" type="image/jpeg">
   <style>
     :root {
       --bg: #090d16;
-      --card-bg: rgba(15, 23, 42, 0.6);
-      --card-hover-bg: rgba(22, 34, 61, 0.8);
+      --card-bg: rgba(15, 23, 42, 0.65);
+      --card-hover-bg: rgba(22, 34, 61, 0.85);
       --card-border: rgba(255, 255, 255, 0.08);
       --text-main: #f8fafc;
       --text-muted: #94a3b8;
       --text-dim: #64748b;
       --accent: #38bdf8;
       --accent-hover: #7dd3fc;
-      --radius: 18px;
+      --radius: 20px;
       --radius-sm: 10px;
       --transition: all 0.28s cubic-bezier(0.16, 1, 0.3, 1);
     }
@@ -35,18 +35,21 @@
       font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
       line-height: 1.6;
       min-height: 100vh;
+      display: flex;
+      flex-direction: column;
       overflow-x: hidden;
       background-image: 
-        radial-gradient(circle at 50% 0%, rgba(56, 189, 248, 0.12) 0%, transparent 60%),
-        radial-gradient(circle at 10% 30%, rgba(99, 102, 241, 0.08) 0%, transparent 50%),
-        radial-gradient(circle at 90% 70%, rgba(139, 92, 246, 0.08) 0%, transparent 50%);
+        radial-gradient(circle at 50% 0%, rgba(56, 189, 248, 0.14) 0%, transparent 60%),
+        radial-gradient(circle at 15% 35%, rgba(99, 102, 241, 0.09) 0%, transparent 50%),
+        radial-gradient(circle at 85% 65%, rgba(139, 92, 246, 0.09) 0%, transparent 50%);
       background-attachment: fixed;
     }
 
     .container {
-      max-width: 980px;
+      max-width: 960px;
       margin: 0 auto;
       padding: 0 24px;
+      width: 100%;
     }
 
     /* 顶部导航 */
@@ -79,8 +82,8 @@
     }
 
     .nav-logo img {
-      width: 32px;
-      height: 32px;
+      width: 34px;
+      height: 34px;
       border-radius: 50%;
       border: 1px solid var(--card-border);
     }
@@ -104,51 +107,51 @@
 
     /* Hero 名片区 */
     .hero {
-      padding: 60px 0 35px;
+      padding: 65px 0 45px;
       text-align: center;
     }
 
     .avatar-wrapper {
       position: relative;
       display: inline-block;
-      margin-bottom: 20px;
+      margin-bottom: 22px;
     }
 
     .avatar {
-      width: 104px;
-      height: 104px;
+      width: 110px;
+      height: 110px;
       border-radius: 50%;
       object-fit: cover;
-      border: 2px solid rgba(56, 189, 248, 0.4);
-      box-shadow: 0 0 30px rgba(56, 189, 248, 0.2);
+      border: 2px solid rgba(56, 189, 248, 0.45);
+      box-shadow: 0 0 35px rgba(56, 189, 248, 0.25);
       transition: var(--transition);
     }
 
     .avatar:hover {
       transform: scale(1.05);
       border-color: var(--accent);
-      box-shadow: 0 0 40px rgba(56, 189, 248, 0.35);
+      box-shadow: 0 0 45px rgba(56, 189, 248, 0.4);
     }
 
     .status-badge {
       position: absolute;
-      bottom: 4px;
-      right: 4px;
-      width: 16px;
-      height: 16px;
+      bottom: 5px;
+      right: 5px;
+      width: 17px;
+      height: 17px;
       background: #10b981;
       border: 3px solid var(--bg);
       border-radius: 50%;
     }
 
     .hero-name {
-      font-size: 2.3rem;
+      font-size: 2.5rem;
       font-weight: 800;
       letter-spacing: -0.03em;
       background: linear-gradient(135deg, #ffffff 40%, var(--accent) 100%);
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
-      margin-bottom: 8px;
+      margin-bottom: 10px;
     }
 
     .hero-tagline {
@@ -158,24 +161,24 @@
       font-size: 1.05rem;
       color: var(--accent);
       font-weight: 600;
-      margin-bottom: 12px;
-      padding: 4px 14px;
+      margin-bottom: 16px;
+      padding: 5px 16px;
       border-radius: 9999px;
       background: rgba(56, 189, 248, 0.08);
-      border: 1px solid rgba(56, 189, 248, 0.2);
+      border: 1px solid rgba(56, 189, 248, 0.22);
     }
 
     .hero-bio {
       color: var(--text-muted);
-      max-width: 600px;
-      margin: 0 auto 24px;
-      font-size: 0.95rem;
+      max-width: 580px;
+      margin: 0 auto 26px;
+      font-size: 0.98rem;
     }
 
     .hero-actions {
       display: flex;
       justify-content: center;
-      gap: 12px;
+      gap: 14px;
       flex-wrap: wrap;
     }
 
@@ -183,9 +186,9 @@
       display: inline-flex;
       align-items: center;
       gap: 8px;
-      padding: 9px 20px;
+      padding: 10px 22px;
       border-radius: 9999px;
-      font-size: 0.9rem;
+      font-size: 0.92rem;
       font-weight: 600;
       text-decoration: none;
       transition: var(--transition);
@@ -199,7 +202,7 @@
 
     .btn-primary:hover {
       background: var(--accent-hover);
-      box-shadow: 0 0 24px rgba(56, 189, 248, 0.4);
+      box-shadow: 0 0 26px rgba(56, 189, 248, 0.45);
       transform: translateY(-2px);
     }
 
@@ -211,38 +214,39 @@
 
     .btn-secondary:hover {
       background: rgba(255, 255, 255, 0.1);
-      border-color: rgba(255, 255, 255, 0.2);
+      border-color: rgba(255, 255, 255, 0.22);
       transform: translateY(-2px);
     }
 
     /* 章节标题 */
     .section-header {
-      margin-bottom: 24px;
+      margin-bottom: 28px;
+      text-align: center;
     }
 
     .section-title {
-      display: flex;
+      display: inline-flex;
       align-items: center;
       gap: 10px;
-      font-size: 1.45rem;
+      font-size: 1.6rem;
       font-weight: 800;
       letter-spacing: -0.02em;
     }
 
     .section-subtitle {
       color: var(--text-dim);
-      font-size: 0.88rem;
-      margin-top: 4px;
+      font-size: 0.92rem;
+      margin-top: 6px;
     }
 
     /* =========================================
-       ⭐ 核心模块：常用 AI 工具 (Flagship AI Stack)
+       ⭐ 核心绝对主角：常用 AI 工具
        ========================================= */
     .ai-showcase-grid {
       display: grid;
       grid-template-columns: repeat(2, 1fr);
-      gap: 20px;
-      margin-bottom: 50px;
+      gap: 22px;
+      margin-bottom: 70px;
     }
 
     .ai-card {
@@ -250,7 +254,7 @@
       background: var(--card-bg);
       border: 1px solid var(--card-border);
       border-radius: var(--radius);
-      padding: 26px 24px;
+      padding: 30px 26px;
       transition: var(--transition);
       overflow: hidden;
       display: flex;
@@ -272,29 +276,29 @@
     /* 专属品牌色微光与顶条 */
     .ai-card.deepseek:hover {
       border-color: rgba(0, 102, 255, 0.5);
-      box-shadow: 0 16px 36px -12px rgba(0, 102, 255, 0.25);
-      transform: translateY(-4px);
+      box-shadow: 0 20px 40px -12px rgba(0, 102, 255, 0.25);
+      transform: translateY(-5px);
     }
     .ai-card.deepseek::before { background: linear-gradient(90deg, #0066FF, #38bdf8); }
 
     .ai-card.antigravity:hover {
       border-color: rgba(66, 133, 244, 0.5);
-      box-shadow: 0 16px 36px -12px rgba(66, 133, 244, 0.25);
-      transform: translateY(-4px);
+      box-shadow: 0 20px 40px -12px rgba(66, 133, 244, 0.25);
+      transform: translateY(-5px);
     }
     .ai-card.antigravity::before { background: linear-gradient(90deg, #4285F4, #34A853); }
 
     .ai-card.claude:hover {
       border-color: rgba(217, 119, 6, 0.5);
-      box-shadow: 0 16px 36px -12px rgba(217, 119, 6, 0.25);
-      transform: translateY(-4px);
+      box-shadow: 0 20px 40px -12px rgba(217, 119, 6, 0.25);
+      transform: translateY(-5px);
     }
     .ai-card.claude::before { background: linear-gradient(90deg, #D97706, #F59E0B); }
 
     .ai-card.workbuddy:hover {
       border-color: rgba(139, 92, 246, 0.5);
-      box-shadow: 0 16px 36px -12px rgba(139, 92, 246, 0.25);
-      transform: translateY(-4px);
+      box-shadow: 0 20px 40px -12px rgba(139, 92, 246, 0.25);
+      transform: translateY(-5px);
     }
     .ai-card.workbuddy::before { background: linear-gradient(90deg, #8B5CF6, #EC4899); }
 
@@ -302,17 +306,17 @@
       display: flex;
       align-items: center;
       gap: 16px;
-      margin-bottom: 14px;
+      margin-bottom: 16px;
     }
 
     .ai-icon-box {
-      width: 48px;
-      height: 48px;
-      border-radius: 14px;
+      width: 52px;
+      height: 52px;
+      border-radius: 16px;
       display: flex;
       align-items: center;
       justify-content: center;
-      font-size: 1.4rem;
+      font-size: 1.5rem;
       background: rgba(255, 255, 255, 0.05);
       border: 1px solid rgba(255, 255, 255, 0.08);
       flex-shrink: 0;
@@ -328,23 +332,24 @@
     }
 
     .ai-name {
-      font-size: 1.25rem;
+      font-size: 1.3rem;
       font-weight: 700;
       color: var(--text-main);
       letter-spacing: -0.01em;
     }
 
     .ai-tagline {
-      font-size: 0.82rem;
+      font-size: 0.85rem;
       color: var(--text-dim);
       font-weight: 500;
+      margin-top: 2px;
     }
 
     .ai-summary {
       color: var(--text-muted);
-      font-size: 0.92rem;
-      line-height: 1.55;
-      margin-bottom: 18px;
+      font-size: 0.94rem;
+      line-height: 1.6;
+      margin-bottom: 22px;
     }
 
     .ai-badges-row {
@@ -354,115 +359,27 @@
     }
 
     .ai-pill {
-      font-size: 0.75rem;
+      font-size: 0.78rem;
       font-weight: 600;
-      padding: 4px 10px;
+      padding: 4px 12px;
       border-radius: 9999px;
       background: rgba(255, 255, 255, 0.04);
       color: var(--text-muted);
       border: 1px solid rgba(255, 255, 255, 0.06);
     }
 
-    .ai-card.deepseek .ai-pill.active { color: #38bdf8; background: rgba(0, 102, 255, 0.12); border-color: rgba(0, 102, 255, 0.25); }
-    .ai-card.antigravity .ai-pill.active { color: #60a5fa; background: rgba(66, 133, 244, 0.12); border-color: rgba(66, 133, 244, 0.25); }
-    .ai-card.claude .ai-pill.active { color: #fbbf24; background: rgba(217, 119, 6, 0.12); border-color: rgba(217, 119, 6, 0.25); }
-    .ai-card.workbuddy .ai-pill.active { color: #c084fc; background: rgba(139, 92, 246, 0.12); border-color: rgba(139, 92, 246, 0.25); }
-
-    /* 分割线 */
-    .divider {
-      height: 1px;
-      background: linear-gradient(90deg, transparent, var(--card-border), transparent);
-      margin: 40px 0;
-    }
-
-    /* =========================================
-       次级模块：精选项目 (Projects)
-       ========================================= */
-    .projects-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-      gap: 18px;
-      margin-bottom: 40px;
-    }
-
-    .project-card {
-      background: var(--card-bg);
-      border: 1px solid var(--card-border);
-      border-radius: var(--radius);
-      padding: 20px;
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-      transition: var(--transition);
-      text-decoration: none;
-      color: inherit;
-    }
-
-    .project-card:hover {
-      background: var(--card-hover-bg);
-      border-color: rgba(56, 189, 248, 0.3);
-      transform: translateY(-3px);
-    }
-
-    .project-header {
-      display: flex;
-      justify-content: space-between;
-      align-items: flex-start;
-      margin-bottom: 8px;
-    }
-
-    .project-name {
-      font-size: 1.05rem;
-      font-weight: 700;
-      color: var(--text-main);
-    }
-
-    .project-arrow {
-      color: var(--text-dim);
-      font-size: 1.05rem;
-      transition: var(--transition);
-    }
-
-    .project-card:hover .project-arrow {
-      color: var(--accent);
-      transform: translate(2px, -2px);
-    }
-
-    .project-desc {
-      color: var(--text-muted);
-      font-size: 0.88rem;
-      margin-bottom: 16px;
-      flex-grow: 1;
-    }
-
-    .project-tags {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 6px;
-    }
-
-    .tag {
-      font-size: 0.72rem;
-      font-weight: 500;
-      padding: 2px 7px;
-      border-radius: 6px;
-      background: rgba(255, 255, 255, 0.04);
-      color: var(--text-dim);
-      border: 1px solid rgba(255, 255, 255, 0.06);
-    }
-
-    .tag.highlight {
-      background: rgba(56, 189, 248, 0.1);
-      color: var(--accent);
-      border-color: rgba(56, 189, 248, 0.2);
-    }
+    .ai-card.deepseek .ai-pill.active { color: #38bdf8; background: rgba(0, 102, 255, 0.14); border-color: rgba(0, 102, 255, 0.28); }
+    .ai-card.antigravity .ai-pill.active { color: #60a5fa; background: rgba(66, 133, 244, 0.14); border-color: rgba(66, 133, 244, 0.28); }
+    .ai-card.claude .ai-pill.active { color: #fbbf24; background: rgba(217, 119, 6, 0.14); border-color: rgba(217, 119, 6, 0.28); }
+    .ai-card.workbuddy .ai-pill.active { color: #c084fc; background: rgba(139, 92, 246, 0.14); border-color: rgba(139, 92, 246, 0.28); }
 
     /* 页脚 */
     footer {
-      padding: 35px 0 30px;
+      margin-top: auto;
+      padding: 40px 0 35px;
       text-align: center;
       color: var(--text-dim);
-      font-size: 0.85rem;
+      font-size: 0.88rem;
       border-top: 1px solid var(--card-border);
     }
 
@@ -485,10 +402,7 @@
 
     @media (max-width: 640px) {
       .hero-name {
-        font-size: 1.85rem;
-      }
-      .nav-links {
-        display: none;
+        font-size: 2rem;
       }
     }
   </style>
@@ -505,8 +419,6 @@
       </a>
       <ul class="nav-links">
         <li><a href="#ai-stack">常用 AI 工具</a></li>
-        <li><a href="#projects">精选项目</a></li>
-        <li><a href="./html/clock/clock.html">Kindle 时钟</a></li>
         <li><a href="https://github.com/islanddddddd" target="_blank" rel="noopener">GitHub ↗</a></li>
       </ul>
     </div>
@@ -522,10 +434,10 @@
       <h1 class="hero-name">islanddddddd</h1>
       <div class="hero-tagline">
         <span>🤖</span>
-        <span>AI-Native Engineering & Daily AI Stack</span>
+        <span>Everyday AI Stack & Intelligent Agents</span>
       </div>
       <p class="hero-bio">
-        以大模型工程与智能体协作（Agentic Workflow）为核心驱动力，探索前沿 AI 协同编程与全自动开发体验。
+        专注于大模型前沿应用与智能体协作工作流，构建人机高效协同体验。
       </p>
       <div class="hero-actions">
         <a href="#ai-stack" class="btn btn-primary">探索常用 AI 工具 ↓</a>
@@ -533,22 +445,21 @@
           <svg width="18" height="18" viewBox="0 0 16 16" fill="currentColor">
             <path fill-rule="evenodd" d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/>
           </svg>
-          GitHub 主页
+          GitHub 个人主页
         </a>
-        <a href="#projects" class="btn btn-secondary">开源项目</a>
       </div>
     </section>
 
     <!-- =========================================
-         ⭐ 核心主角：常用 AI 工具 (Everyday AI Stack)
+         ⭐ 核心聚焦：常用 AI 工具 (Everyday AI Stack)
          ========================================= -->
     <section id="ai-stack">
       <div class="section-header">
         <h2 class="section-title">
           <span>🤖</span>
-          <span>Everyday AI Stack / 核心常用 AI 工具</span>
+          <span>Everyday AI Stack / 常用 AI 工具</span>
         </h2>
-        <p class="section-subtitle">深度融合日常研发与生产力流的核心智能体与大模型套件</p>
+        <p class="section-subtitle">驱动日常研发与生产力实践的核心智能体与大模型套件</p>
       </div>
 
       <div class="ai-showcase-grid">
@@ -639,96 +550,13 @@
 
       </div>
     </section>
-
-    <div class="divider"></div>
-
-    <!-- =========================================
-         次级模块：精选项目 (Projects)
-         ========================================= -->
-    <section id="projects">
-      <div class="section-header">
-        <h2 class="section-title">
-          <span>🌟</span>
-          <span>Featured Projects / 精选开源项目</span>
-        </h2>
-        <p class="section-subtitle">开发过程沉淀的实用工具集与开源库</p>
-      </div>
-
-      <div class="projects-grid">
-
-        <!-- sql_to_Chen_ER -->
-        <a href="https://github.com/islanddddddd/sql_to_Chen_ER" target="_blank" rel="noopener" class="project-card">
-          <div>
-            <div class="project-header">
-              <span class="project-name">sql_to_Chen_ER</span>
-              <span class="project-arrow">↗</span>
-            </div>
-            <p class="project-desc">快速将 SQL 或 DBML 转换为陈氏概念 ER 模型，免配置在线可视化转换工具。</p>
-          </div>
-          <div class="project-tags">
-            <span class="tag highlight">JavaScript</span>
-            <span class="tag">ER Diagram</span>
-            <span class="tag">Online Tool</span>
-          </div>
-        </a>
-
-        <!-- novel-copilot -->
-        <a href="https://github.com/islanddddddd/novel-copilot" target="_blank" rel="noopener" class="project-card">
-          <div>
-            <div class="project-header">
-              <span class="project-name">novel-copilot</span>
-              <span class="project-arrow">↗</span>
-            </div>
-            <p class="project-desc">网络小说抓取、结构化文本排版与辅助阅读的一体化开发者工具集。</p>
-          </div>
-          <div class="project-tags">
-            <span class="tag highlight">TypeScript</span>
-            <span class="tag">Web Scraping</span>
-            <span class="tag">Productivity</span>
-          </div>
-        </a>
-
-        <!-- reverend-insanity-wiki -->
-        <a href="https://github.com/islanddddddd/reverend-insanity-wiki" target="_blank" rel="noopener" class="project-card">
-          <div>
-            <div class="project-header">
-              <span class="project-name">reverend-insanity-wiki</span>
-              <span class="project-arrow">↗</span>
-            </div>
-            <p class="project-desc">蛊真人题材世界观 Wiki 知识库及内容索引系统，沉淀社区资料与设定条目。</p>
-          </div>
-          <div class="project-tags">
-            <span class="tag highlight">Python</span>
-            <span class="tag">Wiki</span>
-            <span class="tag">Knowledge Base</span>
-          </div>
-        </a>
-
-        <!-- kindle_clock -->
-        <a href="./html/clock/clock.html" class="project-card">
-          <div>
-            <div class="project-header">
-              <span class="project-name">Kindle 极简数字时钟</span>
-              <span class="project-arrow">↗</span>
-            </div>
-            <p class="project-desc">专为墨水屏与全屏桌面定制的高对比度时钟，支持一键横竖屏旋转与秒级走时。</p>
-          </div>
-          <div class="project-tags">
-            <span class="tag highlight">HTML / CSS</span>
-            <span class="tag">Minimalist</span>
-            <span class="tag">Live App</span>
-          </div>
-        </a>
-
-      </div>
-    </section>
   </main>
 
   <!-- 页脚 -->
   <footer>
     <div class="container">
       <p>✨ <i>"Stay hungry, stay curious, and let code solve the repetitive."</i> ✨</p>
-      <p style="margin-top: 6px;">
+      <p style="margin-top: 8px;">
         © 2026 <a href="https://github.com/islanddddddd">islanddddddd</a> · Powered by Everyday AI & GitHub Pages
       </p>
     </div>
